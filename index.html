@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Wayne's 農產品比價網</title>
+</head>
+<body>
+
+<div class="title">
+    <h1>
+        <a href="index.html">Produce</a>
+    </h1>
+</div>
+
+<div class="outSideBox">
+    <div class="btnBox">
+        <button class="vegetables">蔬菜</button>
+        <button class="fruit">水果</button>
+        <button class="flower">花卉</button>
+    </div>
+
+
+<div class="findOutSideBox">
+    <p>作物名稱</p>
+    <input type="text" class="findKeyWord" placeholder="請輸入作物名稱" autofocus>
+    <button class="findBtn">搜尋</button>
+</div>
+
+<div class="optionOutSideBox">
+    <select class="sortSelect">
+        <option class="" value="排序">排序</option>
+        <option class="" value="依上價排序">依上價排序</option>
+        <option class="" value="依中價排序">依中價排序</option>
+        <option class="" value="依下價排序">依下價排序</option>
+        <option class="" value="依平均價排序">依平均價排序</option>
+        <option class="" value="依交易量排序">依交易量排序</option>
+    </select>
+</div>
+
+<h2 class="findResult"></h2>
+
+  <table>
+
+    <thead>
+        <tr>
+            <th class="cropName">作物</th>
+            <th class="marketName">市場</th>
+            <th>上價</th>
+            <th>中價</th>
+            <th>下價</th>
+            <th>平均價</th>
+            <th>交易量</th>
+        </tr>
+    </thead>
+
+    <tbody class="box" cellpadding="0">
+    </tbody>
+
+</table>
+
+    <div class="searchOutSideBox">
+        <p class="search"></p>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
