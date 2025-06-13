@@ -1,4 +1,5 @@
 const search = document.querySelector('.search');
+search.textContent = '資料載入中...';
 
 const box = document.querySelector('.box');      
 const textContent = document.querySelector('.textContent');
