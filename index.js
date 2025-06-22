@@ -4,6 +4,9 @@ search.textContent = '資料載入中...';
 const box = document.querySelector('.box');      
 const textContent = document.querySelector('.textContent');
 
+const  findResult = document.querySelector('.findResult');      //搜尋結果，並顯示在頁面上
+
+
 let vegetablesArr = [];     //蔬菜資料
 let fruitArr = [];       //水果資料
 let flowerArr = [];     //花卉資料
@@ -26,7 +29,7 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
         }
     });
     
-    //提取各按鈕(快速篩選 蔬菜 水果 花卉)
+    //提取 各按鈕(快速篩選 蔬菜 水果 花卉)
     const vegetables  = document.querySelector('.vegetables');      //蔬菜按鈕
     const fruit  = document.querySelector('.fruit');        //水果按鈕
     const flower  = document.querySelector('.flower');      //花卉按鈕
@@ -52,6 +55,7 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
     function btn(typeArr){
         search.textContent = '資料載入中...';
         box.innerHTML = '';
+        findResult.textContent = '';
         let str = '';
         
         
@@ -77,7 +81,6 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
     //提取 作物名稱輸入欄 及 搜尋按鈕
     const  findKeyWord = document.querySelector('.findKeyWord');        //input輸入欄
     const  findBtn = document.querySelector('.findBtn');        //搜尋按鈕
-    const  findResult = document.querySelector('.findResult');      //搜尋結果，並顯示在頁面上
 
     //搜尋按鈕功能
     findBtn.addEventListener('click',(e)=>{
@@ -129,7 +132,7 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
     //提取 排序欄
     const sortSelect = document.querySelector('.sortSelect');
 
-    //排序
+    //排序功能
     sortSelect.addEventListener('change',function (e) { 
         let getOption = e.target.value;
 
