@@ -53,7 +53,6 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
 
     //封裝### 篩選按鈕功能(蔬菜 水果 花卉)
     function btn(typeArr){
-        search.textContent = '資料載入中...';
         box.innerHTML = '';
         findResult.textContent = '';
         let str = '';
@@ -99,13 +98,13 @@ axios.get('https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsT
             return item.作物名稱 && item.作物名稱.includes(keyWord);
        });
 
-       //用來存取 keyword 搜尋出來的當前頁面資料 (方便排序用)
+       //用來存取 keyword 當下搜尋出來的當前頁面資料 (方便排序用)
        currentData = keyWordArr;
 
        str ='';
 
         if (keyWordArr.length === 0) {
-            search.textContent = '查詢不到當日的交易資訊QQ';
+            search.textContent = '查詢不到當日的交易資訊';
         }else{
             findResult.textContent = `查看「${keyWord}」的比價結果，共${keyWordArr.length}筆`
         };
